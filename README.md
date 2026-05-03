@@ -1,146 +1,46 @@
-# PeliQAn Test Automation Framework
+# BaseFramework
+*Foundation for reliable QA automation.*
 
-A comprehensive BDD test automation framework for web and API testing, built using Java, Selenium, RestAssured, and Cucumber.
+![GitHub top language](https://img.shields.io/github/languages/top/rothfick/BaseFramework?style=flat-square)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
+![Made with love by rothfick](https://img.shields.io/badge/Made%20with%20%E2%99%A5%20by-rothfick-ff69b4.svg?style=flat-square)
+[![Portfolio](https://img.shields.io/badge/Portfolio-rothfick-blue.svg?style=flat-square)](https://github.com/rothfick)
 
-## Features
+## ✨ Overview
+BaseFramework provides a streamlined collection of reusable base layers designed to accelerate the development of robust Selenium test automation frameworks. It abstracts common complexities, offering a clean, maintainable, and scalable starting point for various QA automation projects.
 
-- BDD-style tests using Cucumber
-- Page Object Model design pattern for UI tests
-- REST API testing with RestAssured
-- Contract testing with Pact
-- Parallel test execution with TestNG
-- Comprehensive reporting with Allure
-- Screenshot capture on test failure
-- Logging with Log4j2
-- Cross-browser testing
-- Support for headless mode
-- Centralized configuration management
+## 🧱 Tech Stack
+*   **Java**: Primary programming language for development.
+*   **Selenium**: For browser automation and web interaction.
+*   **Maven**: Project management and build automation tool.
 
-## Prerequisites
+## 🚀 Features
+*   **WebDriver Management**: Centralized handling of WebDriver instances.
+*   **Page Object Model (POM) Base Classes**: Standardized structure for UI interactions.
+*   **Utility Functions**: Common helper methods for test scenarios.
+*   **Configuration Management**: Easy handling of test environment parameters.
 
-- Java 11 or higher
-- Maven
-- Chrome, Firefox, Edge, or Safari browser
-
-## Project Structure
-
-```
-framework/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── peliQAn/
-│   │   │           └── framework/
-│   │   │               ├── api/             # API client classes
-│   │   │               ├── config/          # Configuration classes
-│   │   │               ├── core/            # Core framework classes
-│   │   │               ├── pages/           # Page Object classes
-│   │   │               ├── pact/            # Pact contract testing classes
-│   │   │               └── utils/           # Utility classes
-│   │   └── resources/                       # Resources like log4j2.xml
-│   └── test/
-│       ├── java/
-│       │   └── com/
-│       │       └── peliQAn/
-│       │           └── framework/
-│       │               ├── runners/         # TestNG runners
-│       │               └── stepdefinitions/ # Cucumber step definitions
-│       └── resources/
-│           ├── features/                    # Cucumber feature files
-│           ├── data/                        # Test data
-│           └── config/                      # Test configuration
-└── pom.xml                                  # Maven build file
-```
-
-## Getting Started
-
-### Clone the Repository
+## 🛠️ Quickstart
+To get started, clone the repository and run the provided Maven test command:
 
 ```bash
-git clone https://github.com/yourusername/peliQAn-framework.git
-cd peliQAn-framework
+git clone https://github.com/rothfick/BaseFramework.git
+cd BaseFramework
+mvn test
 ```
 
-### Install Dependencies
+## 🗺️ Project Structure
+The project is organized with standard Maven conventions. The `src/main/java` directory contains the core framework components, including base classes for pages, tests, and utilities. Test-specific implementations and configurations would typically reside in `src/test/java` and `src/test/resources` respectively.
 
-```bash
-mvn clean install -DskipTests
-```
+## 🧭 Roadmap
+*   Refine existing base classes for enhanced flexibility.
+*   Integrate a logging framework for improved traceability.
+*   Explore support for parallel test execution.
+*   Expand utility set with additional common automation needs.
 
-### Run Tests
+## 👤 Author
+**rothfick** - [https://github.com/rothfick](https://github.com/rothfick)
+This project is part of my public portfolio showcasing various development and automation endeavors.
 
-Run all tests:
-```bash
-mvn clean test
-```
-
-Run specific test tags:
-```bash
-mvn clean test -Dcucumber.filter.tags="@smoke"
-```
-
-Run tests in parallel:
-```bash
-mvn clean test -DthreadCount=4
-```
-
-### Generate Reports
-
-Generate Allure reports:
-```bash
-mvn allure:report
-```
-
-View Allure reports:
-```bash
-mvn allure:serve
-```
-
-## Configuration
-
-Configuration is managed through `src/test/resources/config/config.properties`. Key properties include:
-
-- `browser`: Target browser (chrome, firefox, edge, safari)
-- `headless`: Run in headless mode (true, false)
-- `app.baseUrl`: Base URL of the application under test
-- `api.baseUrl`: Base URL for API tests
-- `api.timeout`: Timeout for API requests in seconds
-- `screenshot.on.failure`: Take screenshots on test failure (true, false)
-
-## Writing Tests
-
-### UI Tests
-
-1. Create a Page Object class in `src/main/java/com/peliQAn/framework/pages/`
-2. Create a feature file in `src/test/resources/features/`
-3. Implement step definitions in `src/test/java/com/peliQAn/framework/stepdefinitions/`
-
-### API Tests
-
-1. Create a feature file in `src/test/resources/features/`
-2. Implement step definitions in `src/test/java/com/peliQAn/framework/stepdefinitions/`
-3. Use the BaseApiClient for API interactions
-
-### Contract Tests with Pact
-
-1. Extend PactBaseConsumer for consumer tests
-2. Extend PactBaseProvider for provider tests
-
-## Best Practices
-
-- Follow the Page Object Model pattern for UI tests
-- Keep step definitions small and focused
-- Use feature files to describe business scenarios
-- Prefer composition over inheritance
-- Write tests that are independent of each other
-- Use appropriate tags to categorize tests
-- Add descriptive comments and documentation
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contributors
-
-- Initial framework by PeliQAn Team
+## 📄 License
+This project is licensed under the MIT License.
