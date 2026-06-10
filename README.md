@@ -1,3 +1,20 @@
+<!-- README_PRESENTATION_START -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=140&color=0:0F172A,100:2563EB&text=BaseFramework&fontColor=FFFFFF&fontSize=30&fontAlignY=42&desc=BDD%20automation%20baseline%20for%20UI%2C%20API%20and%20contract%20testing&descAlignY=68&descSize=15" alt="BaseFramework banner" />
+</p>
+
+<p align="center">
+  <img alt="Java: 11" src="https://img.shields.io/badge/Java-11-007396?style=for-the-badge" /> <img alt="BDD: Cucumber" src="https://img.shields.io/badge/BDD-Cucumber-23D96C?style=for-the-badge" /> <img alt="API: RestAssured" src="https://img.shields.io/badge/API-RestAssured-2563EB?style=for-the-badge" /> <img alt="Contract: Pact" src="https://img.shields.io/badge/Contract-Pact-7C3AED?style=for-the-badge" /> <img alt="Reports: Allure" src="https://img.shields.io/badge/Reports-Allure-F97316?style=for-the-badge" />
+</p>
+
+<table>
+  <tr><td><strong>Role signal</strong></td><td>UI + API + contract automation framework design</td></tr>
+<tr><td><strong>What to inspect</strong></td><td><code>BaseApiClient</code>, Pact bases, Cucumber runner, feature files</td></tr>
+<tr><td><strong>Best for</strong></td><td>Senior QA Automation, SDET, API testing roles</td></tr>
+</table>
+
+<!-- README_PRESENTATION_END -->
+
 # BaseFramework
 
 Java BDD automation framework for UI, API, and contract-testing foundations.
